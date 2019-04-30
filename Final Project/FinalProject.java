@@ -1,6 +1,20 @@
 package fProject;
+/**
+ * <h1>Final Project JavaDoc</h1>
+ * <p>This class is what makes up the entire project, from the shuffling of the decks to displaying the winner of the math.</p>
+ * <p>Created: 4/29/19</p>
+ * @author Alfred Thomas Cecil
+ */
 import java.util.*;
 public class FinalProject {
+	/**
+	 * This method shuffles the deck,hands cards to each player until the user stops taking cards or goes over twenty-one, and displays the winner and scores
+	 * <pre>Examples:
+	 * {@code  returnType(y) returns a card of randomly selected value
+	 * }</pre>
+	 * 
+	 * @param args (String[]; unused)
+	 */
 	public static void main(String[] args) {
 	Scanner input = new Scanner(System.in);	
 	int[] deck = {2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5,6,6,6,6,7,7,7,7,8,8,8,8,9,9,9,9,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,11,11,11,11};
@@ -12,35 +26,27 @@ public class FinalProject {
 	do {
 		for (int i = 0; i < 1; i++) {
 			int index = (int)(Math.random() * deck.length);
-			int temp = deck[i];
 			deck[i] = deck[index];
-			deck[index] = temp;
 			int top = deck[0];
 			hand += top;
 			
 			for (int j = 0; j < 1; j++) {
 				int index1 = (int)(Math.random() * deck.length);
-				int temp1 = deck[j];
 				deck[j] = deck[index1];
-				deck[index1] = temp1;
 				int top1 = deck[0];
 				opponent1 += top1;
 			}
 			
 				for (int k = 0; k < 1; k++) {
 					int index2 = (int)(Math.random() * deck.length);
-					int temp2 = deck[k];
 					deck[k] = deck[index2];
-					deck[index2] = temp2;
 					int top2 = deck[0];
 					opponent2 += top2;
 				}
 					
 					for (int l = 0; l < 1; l++) {
 						int index3 = (int)(Math.random() * deck.length);
-						int temp3 = deck[l];
 						deck[l] = deck[index3];
-						deck[index3] = temp3;
 						int top3 = deck[0];
 						opponent3 += top3;
 					}
